@@ -1,0 +1,46 @@
+package Files;
+
+import java.util.Scanner;
+import java.util.Locale;
+import Files.Player;
+import Files.Enemy;
+
+
+public class Game {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.printf("__________                       .__            .___    ._.\r\n"
+				+ "\\______   \\ ____   _____   ___  _|__| ____    __| _/____| |\r\n"
+				+ " |    |  _// __ \\ /     \\  \\  \\/ /  |/    \\  / __ |/  _ \\ |\r\n"
+				+ " |    |   \\  ___/|  Y Y  \\  \\   /|  |   |  \\/ /_/ (  <_> )|\r\n"
+				+ " |______  /\\___  >__|_|  /   \\_/ |__|___|  /\\____ |\\____/__\r\n"
+				+ "        \\/     \\/      \\/                \\/      \\/      \\/");
+		
+		menu();
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+	
+	
+	
+	
+	public static void menu() {
+		
+		System.out.printf("1. Iniciar jogo%n2. Configurações%n3. Ranking%n4. Ajuda%n5. Créditos%n 6. Sair%n");
+		
+		
+	}
+
+}
+
+

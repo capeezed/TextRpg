@@ -1,0 +1,9 @@
+package Files;
+
+public class Player {
+
+	public String name;
+	public int health;
+	public int attack;
+	
+}

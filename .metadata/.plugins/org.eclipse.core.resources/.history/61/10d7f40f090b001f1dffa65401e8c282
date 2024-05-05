@@ -1,0 +1,153 @@
+package Files;
+
+import java.util.Scanner;
+import java.util.Locale;
+import Files.Player;
+import Files.Enemy;
+
+
+public class Game {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Unidade de disco inserida - A Caverna");
+		
+		try {
+			Thread.sleep(500);
+			System.out.printf("__________                       .__            .___    ._.\r\n"
+					+ "\\______   \\ ____   _____   ___  _|__| ____    __| _/____| |\r\n"
+					+ " |    |  _// __ \\ /     \\  \\  \\/ /  |/    \\  / __ |/  _ \\ |\r\n"
+					+ " |    |   \\  ___/|  Y Y  \\  \\   /|  |   |  \\/ /_/ (  <_> )|\r\n"
+					+ " |______  /\\___  >__|_|  /   \\_/ |__|___|  /\\____ |\\____/__\r\n"
+					+ "        \\/     \\/      \\/                \\/      \\/      \\/");
+			Thread.sleep(500);
+			menu();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		boolean parar = true;
+		boolean continuar = true;
+		
+		while(continuar)
+		{
+			
+			try {
+				int escolhamenu = sc.nextInt();
+				switch(escolhamenu)
+				{
+				
+				case 1:
+					
+					iniciar();
+					continuar = false;
+					break;
+				
+				case 2:
+					System.out.println("Em andamento");
+					break;
+				
+				case 3:
+					System.out.printf("1. CaP%n2. Mel%n3. RECEBA%n");
+					break;
+				
+				case 4:
+					System.out.printf("Guia: https://www.youtube.com/watch?v=kcelgrGY1h8&pp=ygUJbmV3IGplYW5z");
+					break;
+				
+				case 5:
+					System.out.printf("Direção: Cap%nProgramação: Cap%nDesign: Cap");
+					break;
+					
+				case 6:
+					System.out.println("Removendo unidade de disco...");
+					continuar = false;
+					
+					
+				}
+			
+			
+			
+				
+			}catch(Exception e) {
+				System.out.println("Número inserido inválido!");
+				sc.next();
+			}
+			
+			
+		
+		}		
+		String name;
+		int idade;	
+		String escolha1 = "";
+		
+		System.out.printf("%nAntes de mais nada, vamos aos dados do jogador.%n");
+		System.out.printf("Nome: ");
+		name = sc.next();
+		System.out.printf("Idade: ");
+		idade = sc.nextInt();
+		
+		Player jogador = new Player(name, 50, 10);
+		try {
+		System.out.printf("%n Á frente de %s está 3 caminhos, um pelo meio, esquerda e direita. Qual caminho quer seguir?%n", jogador.name);
+		escolha1 = sc.next();
+		}catch(Exception e) {
+			System.out.println("Formato inválido.");
+		}
+		if(escolha1.equals("meio")) {
+			caminho1();
+		}
+		if(escolha1.equals("esquerda")) {
+			caminho2();
+		}
+		if(escolha1.equals("direita")) {
+			caminho3();
+		}
+	}
+	
+	public static void iniciar() {
+		
+		System.out.println("Jogo feito por: CaProductions");
+		for(int i = 0; i< 30; i++) {
+			System.out.print("-");
+		}
+		System.out.printf("%nVocê é um soldado de sua pátria que está em uma missão de reconhecimento em solo israelense.%n");
+		System.out.println("Seu esquadrão cai em uma armadilha do exército inimigo e são obrigados a recuar a uma vila abandonada e semidestruída. Após um longo combate, sobra apenas você e um 50 homens inimigos, você pede reforços, mas a inteligência pensa que você é um risco e bombardeia o local.");
+		System.out.printf("O chão desmorona e você acaba caindo em um aparentemente sistema de cavernas não-mapeado.%nSeu maior problema começa agora.");
+		
+		
+	}
+		
+	public static void menu() {
+		
+		System.out.printf("%n1. Iniciar jogo%n2. Configurações%n3. Ranking%n4. Ajuda%n5. Créditos%n6. Sair%n");
+		
+		
+	}
+	
+	public static void caminho1() {
+		
+		System.out.printf("Você escolheu ir pelo meio");
+		
+	}
+	
+	public static void caminho2() {
+		
+		System.out.printf("Você escolheu ir pela esquerda");
+		
+	}
+	
+	public static void caminho3() {
+		
+		System.out.printf("Você escolheu ir pela direita");
+		
+	}
+	
+	
+	
+}
+
+
